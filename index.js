@@ -8,4 +8,4 @@ app.use(cors());
 
 app.use("/blog", mainController);
 
-app.listen(port, () => console.log("Server Running"));
+app.listen(process.env.PORT || port, () => console.log("Server Running"));
