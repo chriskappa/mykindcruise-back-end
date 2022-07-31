@@ -118,7 +118,7 @@ const getCategory = (category) => {
         {
           id: 4,
           imageLink:
-            "https://www.kuonistores.co.uk/upload/inspiration/james/cruise-suite/regentheader.jpg",
+            "https://media.cntraveler.com/photos/6008949d8ebb4b589a89b55a/16:9/w_2560%2Cc_limit/BR_D_Lisbon_07.jpg",
           title:
             "2 Night Europe Cruise Queen Mary 2 Sunday 16 October 2022 from £295pp",
         },
@@ -189,6 +189,15 @@ const getCategory = (category) => {
   }
 };
 
+/* 
+  * blog/:category:
+  * This endpoint is responsible to handle all the requests of the application
+  * In real case scenario this end point could do all the work at once to save network requests
+  * eg. It would be better to have for loop adding all the required data and return them at once  
+  * Parameters:category:String
+  * Return Object
+
+  */
 router.get("/:category", (req, res) => {
   const { category } = req.params;
   res.send({ error: false, data: getCategory(category) });
