@@ -7,5 +7,4 @@ app.use(express.json()); //On Each Request has to be JSON
 app.use(cors()); //Use Cors for the requests
 
 app.use("/blog", mainController);
-
 app.listen(process.env.PORT || port, () => console.log("Server Running"));
